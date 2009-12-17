@@ -1,0 +1,142 @@
+/*
+* Copyright (c) 2007 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Project definition file for OSSProtocolAdaptation
+*
+*/
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+#include "../inc/ossprotocoladaptationuids.h"
+
+TARGET          ossprotocoladaptation.dll
+TARGETTYPE      Plugin
+UID             KEComRecognitionDllUid2  KEComRecognitionDllUid3   
+VENDORID        VID_DEFAULT
+CAPABILITY      CAP_ECOM_PLUGIN
+
+VERSION      10.0
+
+EPOCALLOWDLLDATA
+
+EPOCHEAPSIZE	0x100000 0x200000
+START RESOURCE  ../rss/ossprotocoladaptation.rss
+TARGET          ossprotocoladaptation.rsc
+END
+
+
+SOURCEPATH      ../src
+SOURCE			cossprotocolsearchfeatures.cpp
+SOURCE 			cossprotocolplugin.cpp
+SOURCE 			cossprotocolconnection.cpp
+SOURCE      	cossprotocolpresencefeatures.cpp
+SOURCE      	cossprotocolconnectionmanager.cpp
+SOURCE			cossprotocolloginrequest.cpp
+SOURCE			cossprotocollogoutrequest.cpp
+SOURCE			cossprotocolimfeatures.cpp
+SOURCE			waittimer.cpp
+SOURCE			cosssenddataoperation.cpp
+SOURCE			cossprotocolservererrorhandler.cpp
+SOURCE			cosscontactmanager.cpp
+
+//utils
+SOURCE			ossprotocoladaptutils.cpp
+// for logs
+SOURCE      	ossprotocolpluginlogger.cpp
+// presentity groups source
+SOURCEPATH      ../src/presentitygroups
+SOURCE      	cossprotocolpresentitygroups.cpp
+SOURCE      	csubscribepresentitygroupcontentrequest.cpp
+SOURCE      	caddpresentitygroupmemberrequest.cpp
+SOURCE      	cremovepresentitygroupmemberrequest.cpp
+SOURCE      	caddcontactnotificationhandler.cpp
+SOURCE          ccontactsynchandler.cpp
+// ---------------------------------------------------------------------------
+SOURCEPATH      ../src/presencepublishing
+// ---------------------------------------------------------------------------
+SOURCE			cossprotocolpresencepublishing.cpp
+SOURCE			cpresencenotificationhandler.cpp
+SOURCE			cpublishownpresencerequest.cpp
+
+// ---------------------------------------------------------------------------
+SOURCEPATH      ../src/presenceauthorization
+// ---------------------------------------------------------------------------
+SOURCE			cossprotocolpresenceauthorization.cpp
+SOURCE			csubscribepresencegrantrequestlistrequest.cpp
+SOURCE			cpresenceauthuserrequest.cpp
+SOURCE			cwithdrawpresencegrantfrompresentityrequest.cpp
+// Im operations source
+SOURCEPATH      ../src/im
+SOURCE      	cossprotocolimconversation.cpp
+SOURCE      	cosssendmessagerequest.cpp
+SOURCE      	creceivemessagehandler.cpp
+
+SOURCEPATH      ../src/processlauncher
+SOURCE			processlaunher.cpp
+
+// ---------------------------------------------------------------------------
+SOURCEPATH      ../src/search
+// ---------------------------------------------------------------------------
+SOURCE			cossprotocolsearch.cpp
+SOURCE			csearchrequest.cpp
+SOURCE			csearchkeystore.cpp
+SOURCE			csearchgetsearchkeys.cpp
+
+// user includes
+USERINCLUDE     ../inc/search
+USERINCLUDE     .
+USERINCLUDE     ../inc
+USERINCLUDE     ../inc/presentitygroups
+USERINCLUDE     ../inc/im
+USERINCLUDE     ../inc/processlauncher
+USERINCLUDE     ../inc/presencepublishing
+USERINCLUDE     ../inc/presenceauthorization
+USERINCLUDE     ../dataconvlib/inc
+
+USERINCLUDE       ../../xmppsettingsfetcher/inc
+
+// Default system include paths for middleware layer modules.
+APP_LAYER_SYSTEMINCLUDE
+OS_LAYER_LIBC_SYSTEMINCLUDE
+OS_LAYER_GLIB_SYSTEMINCLUDE
+OS_LAYER_SSL_SYSTEMINCLUDE
+OS_LAYER_STDCPP_SYSTEMINCLUDE
+OS_LAYER_DBUS_SYSTEMINCLUDE
+SYSTEMINCLUDE   	/epoc32/include/ecom 
+
+
+
+
+
+LIBRARY         euser.lib   
+LIBRARY         ecom.lib
+LIBRARY         flogger.lib
+LIBRARY         bafl.lib
+LIBRARY			jabbersettings.lib
+LIBRARY			xmppsettingsfetcher.lib
+
+LIBRARY         libc.lib
+LIBRARY			estor.lib 
+LIBRARY         efsrv.lib
+LIBRARY         apparc.lib  
+LIBRARY			opencmessagequeuelibrary.lib
+LIBRARY			opencstringutilslib.lib
+LIBRARY			inetprotutil.lib 
+
+LIBRARY     	serviceprovidersettings.lib
+LIBRARY     	centralrepository.lib
+LIBRARY     	estlib.lib
+LIBRARY         presencecacheclient2.lib
+LIBRARY         presencecacheutils.lib
+
+// End of file

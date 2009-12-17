@@ -1,0 +1,18 @@
+EXPORTS
+	?chartohbufc16@@YAHPBDAAVHBufC16@@@Z @ 1 NONAME ; int chartohbufc16(char const *, class HBufC16 &)
+	?chartohbufc8@@YAXPBDAAVHBufC8@@@Z @ 2 NONAME ; void chartohbufc8(char const *, class HBufC8 &)
+	?chartotbuf16@@YAHPBDAAVTDes16@@@Z @ 3 NONAME ; int chartotbuf16(char const *, class TDes16 &)
+	?chartotbuf8@@YAXPBDAAVTDes8@@@Z @ 4 NONAME ; void chartotbuf8(char const *, class TDes8 &)
+	?tbuf16tochar@@YAHAAVTDes16@@PAD@Z @ 5 NONAME ; int tbuf16tochar(class TDes16 &, char *)
+	?tbuf16towchar@@YAPAGAAVTDes16@@@Z @ 6 NONAME ; unsigned short * tbuf16towchar(class TDes16 &)
+	?tbuf8tochar@@YAPADAAVTDes8@@@Z @ 7 NONAME ; char * tbuf8tochar(class TDes8 &)
+	?tbuf8towchar@@YAHAAVTDes8@@PAG@Z @ 8 NONAME ; int tbuf8towchar(class TDes8 &, unsigned short *)
+	?tbufC16tochar@@YAHAAVTDesC16@@PAD@Z @ 9 NONAME ; int tbufC16tochar(class TDesC16 &, char *)
+	?tbufC16towchar@@YAXAAVTDesC16@@PAG@Z @ 10 NONAME ; void tbufC16towchar(class TDesC16 &, unsigned short *)
+	?tbufC8tochar@@YAXAAVTDesC8@@PAD@Z @ 11 NONAME ; void tbufC8tochar(class TDesC8 &, char *)
+	?tbufC8towchar@@YAHAAVTDesC8@@PAG@Z @ 12 NONAME ; int tbufC8towchar(class TDesC8 &, unsigned short *)
+	?wchartohbufc16@@YAXPBGAAVHBufC16@@@Z @ 13 NONAME ; void wchartohbufc16(unsigned short const *, class HBufC16 &)
+	?wchartohbufc8@@YAHPBGAAVHBufC8@@@Z @ 14 NONAME ; int wchartohbufc8(unsigned short const *, class HBufC8 &)
+	?wchartotbuf16@@YAXPBGAAVTDes16@@@Z @ 15 NONAME ; void wchartotbuf16(unsigned short const *, class TDes16 &)
+	?wchartotbuf8@@YAHPBGAAVTDes8@@@Z @ 16 NONAME ; int wchartotbuf8(unsigned short const *, class TDes8 &)
+
