@@ -58,7 +58,7 @@ static const CPolicyServer::TPolicyElement KIMCachePlatSecElements[] =
         {
         _INIT_SECURITY_POLICY_C2( ECapabilityReadUserData,
                                   ECapabilityWriteUserData ),
-        -5 //CPolicyServer::EFailClient
+        CPolicyServer::EFailClient
         }
     };
 

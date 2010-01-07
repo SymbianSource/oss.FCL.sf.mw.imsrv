@@ -142,9 +142,12 @@ void CIMCacheEventHandler::RunL()
 		    }
 		}	
 		
+	// Comment: cancel operation is changes as synchronous. iContinueObserving from event
+	// can not really be trusted since complete code might be different if leave has occured 
+	// for example. Cancel is handled here as generic cancel.
 	TRACE( T_LIT("CIMCacheEventHandler::RunL() iContinueObserving iContinueObserving = %d") ,iContinueObserving);
 	// check need to continue observing to server
-	if( iContinueObserving )
+	if( iContinueObserving && KErrCancel != iStatus.Int() )
 		{
 		iRegistrar.RegisterObserverToServerL( iStatus ,EIMCacheObserveMessageUpdateRegister );
 		SetActive();
@@ -158,6 +161,9 @@ void CIMCacheEventHandler::RunL()
 void CIMCacheEventHandler::DoCancel()
 	{
 	TRACE( T_LIT("CIMCacheEventHandler::DoCancel() ") );
+	// Comment: set to EFalse here since we can not trust other changes. See
+	// comments in RunL
+	iContinueObserving = EFalse;
 	if( IsActive() )
         {
         TRAP_IGNORE(iRegistrar.CancelRequestL( iStatus ,EIMCacheCancelRequest ));
