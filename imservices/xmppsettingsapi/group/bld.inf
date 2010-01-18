@@ -28,6 +28,8 @@ PRJ_EXPORTS
 1020E334.txt                					 /epoc32/data/Z/private/10202be9/1020E334.txt				//temporary
 1020E334.txt                					 /epoc32/release/winscw/udeb/Z/private/10202be9/1020E334.txt	//temporary
 
+1020E334.txt                					 /epoc32/release/winscw/urel/Z/private/10202be9/1020E334.txt	//temporary
+
 
 PRJ_MMPFILES
 xmppsettingsapi.mmp

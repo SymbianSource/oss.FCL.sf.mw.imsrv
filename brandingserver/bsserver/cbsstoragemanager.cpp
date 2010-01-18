@@ -900,6 +900,9 @@ void CBSStorageManager::CleanupFileL( const TDesC& aFileName )
 		CDir* directories = NULL;
 		
 		User::LeaveIfError( iFs.GetDir( driveAndPath, KEntryAttNormal, ESortByName, files, directories ) );
+
+		CleanupStack :: PushL (files);
+		CleanupStack :: PushL (directories);
 		
 		TInt count = files->Count();
 		for( TInt i = 0; i < count; i++ )
@@ -937,7 +940,10 @@ void CBSStorageManager::CleanupFileL( const TDesC& aFileName )
 				}
 			CleanupStack::PopAndDestroy( fullName );
 			}
-		CleanupStack::PopAndDestroy( nameWithDrive );
+		
+		CleanupStack :: PopAndDestroy (directories);
+		CleanupStack :: PopAndDestroy (files);
+		CleanupStack :: PopAndDestroy (nameWithDrive);
 		}
 	TRACE( T_LIT( "CBSStorageManager::CleanupFileL end") );
 	}

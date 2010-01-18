@@ -597,6 +597,7 @@ void CIMCacheSession::SendChatListDataL( TIMCacheOperationsCode aChangeType ,
 		}
 	else if( iObserverActive && iAccessorInitialized  )
 		{
+        ExternalizeSingleChatItemL(aChangeType, aMsgHeader );
 		iObserverMessage.Complete( EIMOperationUnreadChange );
 		iObserverActive = EFalse;		
 		}

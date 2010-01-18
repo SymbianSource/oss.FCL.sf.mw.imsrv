@@ -244,7 +244,10 @@ EXPORT_C void CXIMPContextEventQueue::SelectTopEventIfNeededL()
         }
     else
         {
-        User::LeaveIfError(iNextEventToGo->Open()); //Open always return KErrNone.            
+        if(iNextEventToGo)
+         {
+         User::LeaveIfError(iNextEventToGo->Open()); //Open always return KErrNone.      
+         }              
         }
     }
 

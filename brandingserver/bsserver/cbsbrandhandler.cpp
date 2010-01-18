@@ -210,6 +210,7 @@ void CBSBrandHandler::GetFileL( const TDesC8& aId, RFile& aFile )
 	if (iLanguage >= 100)
 		User::LeaveIfError (KErrNotFound);
 	HBufC* fileName = GetTextL( aId );
+	CleanupStack :: PushL (fileName);
 
     TBuf<KLangBufLength> buffer;
 // append leading zero only if language code is <10.
@@ -239,6 +240,8 @@ void CBSBrandHandler::GetFileL( const TDesC8& aId, RFile& aFile )
 		TRACE( T_LIT( "CBSBrandHandler::GetFileL found in default brand") );
 	    
 	    }
+	
+	CleanupStack :: PopAndDestroy (fileName);
 
 	aFile = file;
     TRACE( T_LIT( "CBSBrandHandler::GetFileL end") );
