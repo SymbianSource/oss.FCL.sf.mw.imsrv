@@ -7,7 +7,7 @@
   <systemModel>
     <layer name="mw_layer">
       <module name="imsrv">
-        <unit unitID="MeCodo.imsrv" mrp="" bldFile="&layer_real_source_path;/group" name="imsrv" />
+        <unit unitID="MeCoDo.imsrv" mrp="" bldFile="&layer_real_source_path;/group" name="imsrv" />
       </module>
     </layer>
   </systemModel>
