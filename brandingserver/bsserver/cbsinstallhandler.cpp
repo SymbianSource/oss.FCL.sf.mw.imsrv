@@ -343,7 +343,7 @@ TBool CBSInstallHandler::IsBrandInstalled( const TDesC& aBrand )
     // aaa$bbb -> aaa$bbb.install
     CDir* dir = NULL;
     iFs.GetDir( file, KEntryAttNormal, ESortNone, dir );
-    if( dir->Count() > 0 )
+    if( dir && dir->Count() > 0 )
         {
         // brand is installed
         delete dir;
@@ -362,7 +362,7 @@ TBool CBSInstallHandler::IsBrandInstalled( const TDesC& aBrand )
     // check file with different versions:
     // aaa$bbb -> aaa$bbb$*.install
     iFs.GetDir( file, KEntryAttNormal, ESortNone, dir );
-    if( dir->Count() > 0 )
+    if( dir && dir->Count() > 0 )
         {
         // brand is installed
         delete dir;
