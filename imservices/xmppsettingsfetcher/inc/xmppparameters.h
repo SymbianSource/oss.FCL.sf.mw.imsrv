@@ -132,21 +132,21 @@ public:
      *
      * @param aSsl value to set
      */
-	void CXmppParameters::SetConnMgrBus(const TDesC& aConnMgrBus);
+	void SetConnMgrBus(const TDesC& aConnMgrBus);
 	
 	/**
      * Sets the value of the member variable iConnMgrPath
      *
      * @param aSsl value to set
      */
-	void CXmppParameters::SetConnMgrPath(const TDesC& aConnMgrPath);
+	void SetConnMgrPath(const TDesC& aConnMgrPath);
 	
 	/**
      * Sets the value of the member variable iProtocol
      *
      * @param aSsl value to set
      */
-	void CXmppParameters::SetProtocol(const TDesC& aProtocol);
+	void SetProtocol(const TDesC& aProtocol);
 
     /**
      * Returns the value of the member variable iIapId
@@ -223,21 +223,21 @@ public:
      *
      * @param None
      */
-	IMPORT_C const TDesC& CXmppParameters::ConnMgrBus();
+	IMPORT_C const TDesC& ConnMgrBus();
 	
 	/**
      * Returns the value of the member variable iConnMgrPath
      *
      * @param None
      */
-	IMPORT_C const TDesC& CXmppParameters::ConnMgrPath();
+	IMPORT_C const TDesC& ConnMgrPath();
 	
 	/**
      * Returns the value of iProtocol
      *
      * @param None
      */
-	IMPORT_C const TDesC& CXmppParameters::Protocol();
+	IMPORT_C const TDesC& Protocol();
 	
 private: // data
 
