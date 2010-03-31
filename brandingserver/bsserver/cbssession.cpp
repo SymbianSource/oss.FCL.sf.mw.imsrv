@@ -72,6 +72,10 @@ CBSSession::~CBSSession()
 	delete iBuffer;
 	delete iBranding;
 	delete iSeveralData;
+
+	delete iApplicationId;
+	delete iBrandId;
+	delete iDefaultBrandId;
 	
 #ifdef __WINSCW__
 	if( iStorageManager )

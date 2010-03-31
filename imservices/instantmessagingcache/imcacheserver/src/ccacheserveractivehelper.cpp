@@ -430,7 +430,37 @@ void CCacheServerActiveHelper::CloseConversationL( const RMessage2 &aMessage )
             {
             iActiveHeader = NULL;
             }
-       
+        // remove the universal indicator notification if there are no more unread messages,
+        // apart form whose conversation is closed. loop through
+        TInt headerCount = iHeaderArray.Count();
+        headerIndex = KErrNotFound;
+        for( TInt i=0; i<  headerCount; i++ )
+            {
+            // note in this case reciepient is own user id 
+            MIMCacheMessageHeader* header = iHeaderArray[i];
+            TRACE(T_LIT( "CCacheServerActiveHelper::PublishMessageInfoL UnreadMessageCount -- %d"), header->UnreadMessageCount());
+            if(  header->ServiceId() == sericeId && header->UnreadMessageCount() )   
+                {
+                // this is required in the following scenario
+                // you receive 10 new messgaes form two parties(5, each)
+                // whne you close the conversation form one, the universal indicator is still 
+                // for the other party's messages, and when clicked on universal indicator it should
+                // open the conversation view wiht the latest user id.
+                headerIndex = i;
+                }
+            }
+        // there are new messages received form only one party.
+        // hence the buddyid is required as conversation view will be openend.
+        if(KErrNone == headerIndex)
+            {
+            PublishMessageInfoL(iHeaderArray[headerIndex]->BuddyId(), sericeId);
+            }
+        // new messages are recieved from multiple parties, hence no need of the sender id
+        // as the service tab will be opened.
+        else
+            {
+            PublishMessageInfoL(KNullDesC(), sericeId);
+            }
 		PackAndNotifyEventL( EIMOperationChatDeleted, sericeId, msgHeader, NULL ); 
 		 
         delete msgHeader;
@@ -469,6 +499,10 @@ void CCacheServerActiveHelper::CloseAllConversationL( TInt aServiceId )
         }
     if( needToNotify )
         {
+        // remove the universal indicator notification if there it was displayed,
+        // as when you logout all the ocnversations are removed.
+        PublishMessageInfoL(KNullDesC(), aServiceId);
+        
         PackAndNotifyEventL( EIMOperationAllChatDeleted, aServiceId, NULL, NULL ); 
         }
     TRACE( T_LIT( "CCacheServerActiveHelper::CloseAllConversationL  End") );
