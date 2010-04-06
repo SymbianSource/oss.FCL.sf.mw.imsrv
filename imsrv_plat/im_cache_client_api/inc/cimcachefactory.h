@@ -103,7 +103,7 @@ class CIMCacheFactory : public CBase
 		* @param aUserId the aUserId to be used with this interface instance
 		* @return the access interface
 		*/
-		EXPORT_C MIMCacheAccessor* CreateAccessorL(TInt aServiceId,
+		IMPORT_C MIMCacheAccessor* CreateAccessorL(TInt aServiceId,
 													const TDesC& aUserId  );
 	private: // data
 		
