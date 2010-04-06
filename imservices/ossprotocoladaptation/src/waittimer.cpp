@@ -730,7 +730,7 @@ void CWaitTimer::RunL()
     			case ESearch_State_Finished:
     				{
                     LOGGER ( TXT ( "CWaitTimer::ESearch_State_Finished" ) );
-    				operationindex = ( FindOperationL ( iOpId, COssSendDataOperation::OperationId ) );
+    				operationindex = ( FindOperationL ( iOpId, &COssSendDataOperation::OperationId ) );
     
     				if ( operationindex != KErrNotFound )
     					{
@@ -757,7 +757,7 @@ void CWaitTimer::RunL()
     				else
     					{
     					LOGGER ( TXT ( "CWaitTimer::ESearch: ERROR !!" ) );
-    					operationindex = ( FindOperationL ( iOpId, COssSendDataOperation::OperationId ) );
+    					operationindex = ( FindOperationL ( iOpId, &COssSendDataOperation::OperationId ) );
     					iOperations[ operationindex ]->SetResponse ( rmsg ); //ownership of rmsg is transferred
     				    iOperations[ operationindex ]->CompletedOperation ( KErrNotSupported );// for all errors
     				    CleanupStack::Pop( rmsg );
@@ -769,7 +769,7 @@ void CWaitTimer::RunL()
     				{
     				
     				LOGGER ( TXT ( "CWaitTimer::ESearch_Get_Keys" ) );
-    				operationindex = ( FindOperationL ( iOpId, COssSendDataOperation::OperationId ) );
+    				operationindex = ( FindOperationL ( iOpId, &COssSendDataOperation::OperationId ) );
     
     				if ( operationindex != KErrNotFound )
     					{
@@ -792,7 +792,7 @@ void CWaitTimer::RunL()
 			case EUpdateOwnAvtar :	
 			    {
                 LOGGER ( TXT ( "CWaitTimer::EUpdateOwnAvtar" ) );
-                operationindex = ( FindOperationL ( iOpId, COssSendDataOperation::OperationId ) );
+                operationindex = ( FindOperationL ( iOpId, &COssSendDataOperation::OperationId ) );
 
                 if ( operationindex != KErrNotFound )
                     {
@@ -807,7 +807,7 @@ void CWaitTimer::RunL()
     			default:
     					{
     					LOGGER ( TXT ( "CWaitTimer::default start" ) );
-    					operationindex = ( FindOperationL ( iOpId, COssSendDataOperation::OperationId ) );
+    					operationindex = ( FindOperationL ( iOpId, &COssSendDataOperation::OperationId ) );
     
     					if ( operationindex != KErrNotFound )
     						{
@@ -991,7 +991,7 @@ char* CWaitTimer::ResponseL ( TInt aTransId )
 			}
        	else 
 	        {
-	       	TInt x ( FindOperationL ( 6, COssSendDataOperation::OperationId ) );
+	       	TInt x ( FindOperationL ( 6, &COssSendDataOperation::OperationId ) );
 			if( x != -1)
 				{	// is operation completed?
 				TRequestStatus* status = iOperations[ x ]->Status();
@@ -1023,7 +1023,7 @@ char* CWaitTimer::ResponseL ( TInt aTransId )
 		return buff;
 		}			
 	// try to find operation
-	TInt x ( FindOperationL ( aTransId, COssSendDataOperation::OperationId ) );
+	TInt x ( FindOperationL ( aTransId, &COssSendDataOperation::OperationId ) );
 
 	// is operation completed?
 	TRequestStatus* status = iOperations[ x ]->Status();
