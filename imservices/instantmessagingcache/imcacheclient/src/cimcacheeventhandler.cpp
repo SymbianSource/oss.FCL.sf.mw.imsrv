@@ -135,6 +135,16 @@ void CIMCacheEventHandler::RunL()
 			iContinueObserving = EFalse;	
 			break;	
 			}
+		case KErrServerTerminated:
+            {
+            // This case handles when the server terminated status is set.
+            // This is scenario is typically scene when imcache server is uninstalled.
+
+            UnRegisterObserver();
+            DoCancel();
+            break;
+            }
+
 		default :
 		    {
 		    TRACE( T_LIT("CIMCacheEventHandler::RunL() default") );
