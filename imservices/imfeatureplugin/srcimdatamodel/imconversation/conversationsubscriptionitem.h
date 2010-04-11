@@ -71,7 +71,7 @@ public: // New methods
      * Ownership is transferred!
      * @param aList New blocklist.
      */
-    void  SetConversationInfoL(CImConversationInfoImp* aImMessage);
+    IMPORT_C void  SetConversationInfoL(CImConversationInfoImp* aImMessage);
 public: // From MXIMPSubscriptionItem
 
     /**
