@@ -236,10 +236,11 @@ void CCacheServerActiveHelper::StartNewConversationL( const RMessage2& aMessage 
             unreadCount = unreadCount + header->UnreadMessageCount();   
             }
         }
-    if(!unreadCount)
-        {
+    //BugFix:ESLM-83TF7K: Unread messages are not updated to universal indicator.
+//    if(!unreadCount)
+//        {
         PublishMessageInfoL(*buddyId,sericeId);
-        }
+//        }
     
 	CleanupStack::PopAndDestroy(buddyId);
 	
@@ -453,13 +454,13 @@ void CCacheServerActiveHelper::CloseConversationL( const RMessage2 &aMessage )
         // hence the buddyid is required as conversation view will be openend.
         if(KErrNone == headerIndex)
             {
-            PublishMessageInfoL(iHeaderArray[headerIndex]->BuddyId(), sericeId);
+            PublishMessageInfoL(iHeaderArray[headerIndex]->BuddyId(), sericeId, ETrue);
             }
         // new messages are recieved from multiple parties, hence no need of the sender id
         // as the service tab will be opened.
         else
             {
-            PublishMessageInfoL(KNullDesC(), sericeId);
+            PublishMessageInfoL(KNullDesC(), sericeId,ETrue);
             }
 		PackAndNotifyEventL( EIMOperationChatDeleted, sericeId, msgHeader, NULL ); 
 		 
@@ -501,7 +502,7 @@ void CCacheServerActiveHelper::CloseAllConversationL( TInt aServiceId )
         {
         // remove the universal indicator notification if there it was displayed,
         // as when you logout all the ocnversations are removed.
-        PublishMessageInfoL(KNullDesC(), aServiceId);
+        PublishMessageInfoL(KNullDesC(), aServiceId, ETrue);
         
         PackAndNotifyEventL( EIMOperationAllChatDeleted, aServiceId, NULL, NULL ); 
         }
@@ -656,7 +657,8 @@ TInt CCacheServerActiveHelper::ChatHeadersCount()
 // name of history data
 // -----------------------------------------------------------------------------
 //
-void  CCacheServerActiveHelper::PublishMessageInfoL(const TDesC& aSenderId,TInt aServiceId )
+void  CCacheServerActiveHelper::PublishMessageInfoL(const TDesC& aSenderId,TInt aServiceId, 
+                                                    TBool aCloseConversation /*= EFalse*/ )
     {
     // set/reset  the status pane indicator here
     // based on the unread count.
@@ -686,7 +688,7 @@ void  CCacheServerActiveHelper::PublishMessageInfoL(const TDesC& aSenderId,TInt 
     for ( TInt index = 0; index < count; ++index )
         {
         //trap is required if one plugin leaves then it should continue with other plugins.
-        TRAP_IGNORE(iPluginInfo[index]->Plugin().MessageInfoL(unreadCount,aServiceId,aSenderId,multipleSender));
+        TRAP_IGNORE(iPluginInfo[index]->Plugin().MessageInfoL(unreadCount,aServiceId,aSenderId,multipleSender,aCloseConversation));
         }
     }
  // -----------------------------------------------------------------------------

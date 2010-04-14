@@ -102,8 +102,10 @@ class CCacheServerActiveHelper : public CBase
           * publishes the message info to the plugins
           * @param aSenderId, buddy id
           * @param aServiceId, service id
+          * @Param aCloseConversation indicates that the event came from closing the ocnversation.
           */
-		 void  PublishMessageInfoL(const TDesC& aSenderId,TInt aServiceId );
+		 void  PublishMessageInfoL(const TDesC& aSenderId,TInt aServiceId,
+		                            TBool aCloseConversation = EFalse );
 
     										
 public:	
