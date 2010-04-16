@@ -267,6 +267,7 @@ HBufC* CBSStorageManager::ConstructFileNameL( const TDesC& aAppId,
                   langBuf.Length() + KDot().Length() * 3 + KMaxVersionLenght;
 	fileName = HBufC::NewLC( length );
     
+    if(fileName){
     TPtr file( fileName->Des() );
 
     // [application_id]\[brand_id]\[def_filename][language_id]
@@ -286,11 +287,9 @@ HBufC* CBSStorageManager::ConstructFileNameL( const TDesC& aAppId,
 	    file.Append( KDot() );
     	file.Append( versionBuffer );
     	}
-
-    if( fileName )
-    	{
-    	CleanupStack::Pop( fileName );
-    	}
+    	
+    	CleanupStack::Pop( fileName );      
+    }
     return fileName;
     }
 

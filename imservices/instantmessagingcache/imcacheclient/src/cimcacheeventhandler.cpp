@@ -100,7 +100,8 @@ void CIMCacheEventHandler::RunL()
 			}
 	   case EIMOperationCompleted :
 	   		{
-	   		iUpdateHandler.HandleIMCacheEventL( EIMCacheRequestCompleted, NULL );	
+	   		iUpdateHandler.HandleIMCacheEventL( EIMCacheRequestCompleted, NULL );
+			break;	
 	   		}
 	    case EIMOperationChatStarted :
 		    {
