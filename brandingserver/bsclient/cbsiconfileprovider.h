@@ -22,8 +22,8 @@
 
 //  INCLUDES
 #include <e32base.h>
-#include <AknsItemID.h>
-#include <AknIconUtils.h>
+#include <aknsitemid.h>
+#include <akniconutils.h>
 
 
 // FORWARD DECLARATIONS

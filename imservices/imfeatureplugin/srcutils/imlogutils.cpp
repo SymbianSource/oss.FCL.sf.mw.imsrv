@@ -27,12 +27,14 @@ _LIT(KImLogFile, "im.txt");
 
 void XImLogger::Log(TRefByValue<const TDesC> aFmt,...)
     {
+#ifdef _DEBUG
     VA_LIST list;
     VA_START(list, aFmt);
     // Print to log file
     TBuf<KLogBufferLength> buf;
     buf.FormatList(aFmt, list);
     RFileLogger::Write(KImLogDir, KImLogFile, EFileLoggingModeAppend, buf);
+#endif
     }
 
 //  End of File  

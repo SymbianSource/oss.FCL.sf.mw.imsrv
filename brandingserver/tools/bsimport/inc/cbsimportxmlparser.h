@@ -29,7 +29,7 @@
 
 #include <f32file.h>
 
-#include <gmxmldocument.h>
+#include <GMXMLDocument.h>
 
 #include <rbsobjowningptrarray.h>
 

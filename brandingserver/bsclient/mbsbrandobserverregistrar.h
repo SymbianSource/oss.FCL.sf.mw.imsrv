@@ -20,7 +20,7 @@
 #ifndef __MBSBRANDOBSERVERREGISTRAR_H
 #define __MBSBRANDOBSERVERREGISTRAR_H
 
-#include <e32std.h>
+#include <E32Std.h>
 
 
 /**

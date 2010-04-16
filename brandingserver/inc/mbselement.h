@@ -19,7 +19,7 @@
 #ifndef __MBSELEMENT_H
 #define __MBSELEMENT_H
 
-#include <e32std.h>
+#include <E32Std.h>
 #include <rbsobjowningptrarray.h>
 
 enum TBSElementType

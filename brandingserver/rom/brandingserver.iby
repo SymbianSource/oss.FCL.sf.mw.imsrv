@@ -31,7 +31,5 @@ file=ABI_DIR\BUILD_DIR\bsinstall.exe          PROGRAMS_DIR\bsinstall.exe
 // backup registration file
 data=ZPRIVATE\102828dd\backup_registration.xml	private\102828dd\backup_registration.xml
 
-// stubsis file
-data=DATAZ_/system/install/bsstub.sis    system/install/bsstub.sis
 
 #endif // __BS_IBY__

@@ -17,10 +17,10 @@
 
 
 #include <e32cons.h>
-#include <gmxmlelement.h>
-#include <gmxmltext.h>
+#include <GMXMLElement.h>
+#include <GMXMLText.h>
 #include <utf.h>
-#include <AknUtils.h>
+#include <aknutils.h>
 #include <bselementfactory.h>
 #include <cbsbitmap.h>
 

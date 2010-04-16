@@ -49,7 +49,7 @@ LIBRARY             euser.lib
 LIBRARY             efsrv.lib
 LIBRARY		    flogger.lib
 LIBRARY	  	    estor.lib
-LIBRARY aknskins.lib    
+LIBRARY AknSkins.lib    
 LIBRARY aknicon.lib //avkon icons
 LIBRARY cone.lib
 LIBRARY charconv.lib 

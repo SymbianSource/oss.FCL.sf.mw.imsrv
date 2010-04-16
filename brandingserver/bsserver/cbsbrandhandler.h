@@ -19,7 +19,7 @@
 #ifndef __CBSBRANDHANDLER_H__
 #define __CBSBRANDHANDLER_H__
 
-#include "rbsobjowningptrarray.h"
+#include "RBSObjOwningPtrArray.h"
 
 #include <e32std.h>
 #include <e32base.h>

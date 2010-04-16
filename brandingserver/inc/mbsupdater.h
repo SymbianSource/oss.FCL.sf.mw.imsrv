@@ -20,7 +20,7 @@
  #ifndef __MBSUPDATER_H
  #define __MBSUPDATER_H
 
- #include <e32std.h>
+ #include <E32Std.h>
  #include <mbselement.h>
 
 class MBSBackupRestoreStateObserver ;

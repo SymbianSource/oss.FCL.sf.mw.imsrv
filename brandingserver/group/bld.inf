@@ -33,9 +33,9 @@ PRJ_EXPORTS
 ../inc/mbselement.h          		MW_LAYER_PLATFORM_EXPORT_PATH(mbselement.h)
 ../inc/cbsbitmap.h          		MW_LAYER_PLATFORM_EXPORT_PATH(cbsbitmap.h)
 ../inc/bselementfactory.h          	MW_LAYER_PLATFORM_EXPORT_PATH(bselementfactory.h)
-../inc/tbselementiterator.h    		MW_LAYER_PLATFORM_EXPORT_PATH(tbselementiterator.h)
-../inc/rbsobjowningptrarray.h  		MW_LAYER_PLATFORM_EXPORT_PATH(rbsobjowningptrarray.h)
-../inc/rbsobjowningptrarray.inl		MW_LAYER_PLATFORM_EXPORT_PATH(rbsobjowningptrarray.inl)
+../inc/TBSElementIterator.h    		MW_LAYER_PLATFORM_EXPORT_PATH(TBSElementIterator.h)
+../inc/RBSObjOwningPtrArray.h  		MW_LAYER_PLATFORM_EXPORT_PATH(RBSObjOwningPtrArray.h)
+../inc/RBSObjOwningPtrArray.inl		MW_LAYER_PLATFORM_EXPORT_PATH(RBSObjOwningPtrArray.inl)
 ../inc/mbsbrandchangeobserver.h		MW_LAYER_PLATFORM_EXPORT_PATH(mbsbrandchangeobserver.h)
 ../inc/mbsbackuprestorestateobserver.h	MW_LAYER_PLATFORM_EXPORT_PATH(mbsbackuprestorestateobserver.h)
 
@@ -43,7 +43,4 @@ PRJ_EXPORTS
 
 // Exporting iby file
 
-../rom/brandingserver.iby           CORE_MW_LAYER_IBY_EXPORT_PATH(brandingserver.iby)
-
-// Exporting stubsis file
-../sis/bsstub.sis           /epoc32/data/Z/System/Install/bsstub.sis
+../ROM/brandingserver.iby           CORE_MW_LAYER_IBY_EXPORT_PATH(brandingserver.iby)

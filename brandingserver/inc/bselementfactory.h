@@ -19,7 +19,7 @@
 #ifndef __BSELEMENTFACTORY_H
 #define __BSELEMENTFACTORY_H
 
-#include <e32std.h>
+#include <E32Std.h>
 #include <mbselement.h>
 
 

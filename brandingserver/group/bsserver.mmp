@@ -28,7 +28,7 @@ CAPABILITY      CAP_SERVER
 TARGETPATH      /system/libs
 
 
-SOURCEPATH  ../bsserver
+SOURCEPATH  ../BSServer
 SOURCE      cbsserver.cpp
 SOURCE      cbssession.cpp
 SOURCE	    cbsbrandhandler.cpp
@@ -38,7 +38,7 @@ SOURCE	    cbsstorage.cpp
 SOURCE      cbsinstallhandler.cpp
 SOURCE      cbsbackupobserver.cpp
 
-SOURCEPATH	../bsclient
+SOURCEPATH	../BSClient
 SOURCE		cbselement.cpp
 SOURCE		cbsbitmap.cpp
 SOURCE		bselementfactory.cpp

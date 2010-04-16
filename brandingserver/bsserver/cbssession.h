@@ -21,7 +21,7 @@
 
 #include <e32base.h>
 #include <s32mem.h>
-#include "rbsobjowningptrarray.h"
+#include "RBSObjOwningPtrArray.h"
 #include "bsserverdefs.h"
 #include "mbsbackupobserver.h"
 

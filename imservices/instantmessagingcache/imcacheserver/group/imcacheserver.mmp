@@ -50,7 +50,7 @@ LIBRARY         euser.lib
 LIBRARY         flogger.lib
 LIBRARY         charconv.lib
 LIBRARY     	commonengine.lib
-LIBRARY         rsfwmountman.lib
+////LIBRARY         rsfwmountman.lib
 LIBRARY 		estor.lib 
 LIBRARY     	ecom.lib 
 

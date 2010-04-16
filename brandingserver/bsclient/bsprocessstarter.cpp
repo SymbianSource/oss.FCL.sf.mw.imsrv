@@ -16,7 +16,7 @@
 */
 //  INCLUDE FILES
 #include "bsprocessstarter.h"
-#include <e32std.h>
+#include <e32std.H>
 #include <f32file.h>
 
 
