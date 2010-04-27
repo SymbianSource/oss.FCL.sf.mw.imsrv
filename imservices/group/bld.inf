@@ -30,7 +30,6 @@ PRJ_MMPFILES
 #include "../searchfeatureplugin/group/bld.inf"
 #include "../xmppsettingsapi/group/bld.inf"
 #include "../xmppsettingsfetcher/group/bld.inf"
-#include "../ossprotocoladaptation/group/bld.inf"
 #include "../instantmessagingcache/group/bld.inf"
 
 PRJ_TESTMMPFILES

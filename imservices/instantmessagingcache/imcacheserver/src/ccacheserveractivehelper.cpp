@@ -585,6 +585,7 @@ void CCacheServerActiveHelper::GetServiceChatHeaderArrayL(TInt aServiceId , RPoi
 	{
 	TRACE( T_LIT( "CCacheServerActiveHelper::GetServiceChatHeaderArrayL	start") );		
 	
+	CleanupClosePushL(aServiceHeaderArray);
    
     if( -1 == aServiceId )
         {
@@ -601,6 +602,7 @@ void CCacheServerActiveHelper::GetServiceChatHeaderArrayL(TInt aServiceId , RPoi
                 }
             }        
         }
+    CleanupStack::Pop(&aServiceHeaderArray);
     TRACE( T_LIT( "CCacheServerActiveHelper::GetServiceChatHeaderArrayL    end") );
 	}
 

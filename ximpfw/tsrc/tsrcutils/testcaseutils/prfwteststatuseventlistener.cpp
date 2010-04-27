@@ -186,6 +186,7 @@ EXPORT_C void CXIMPTestStatusEventListener::GetEventTemplateL(
         RArray< TXIMPTestStatusEventSnapshot >& aArray,
         TXIMPTestStatusEventTemplate aTemplate )
     {
+	CleanupClosePushL(aArray); 
     switch( aTemplate )
         {
         // session handling
@@ -552,6 +553,7 @@ EXPORT_C void CXIMPTestStatusEventListener::GetEventTemplateL(
             Panic( EStatusEventListenerUnknownEventTemplate );
             }
         }
+		CleanupStack::Pop(&aArray);
     }
 
 

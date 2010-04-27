@@ -331,11 +331,13 @@ TPtrC CBSStorage::ProposedDirL()
 //
 void CBSStorage::GetListOfFilesL( RArray<TPtrC>& aFileList )
     {
+    CleanupClosePushL(aFileList);
     TInt count = iElements.Count();
     for( TInt i = 0; i < count; i++ )
         {
         AppendFilesL( iElements[i], aFileList );
         }
+    CleanupStack::Pop(&aFileList);
     }
 
 // ---------------------------------------------------------------------------
