@@ -24,7 +24,7 @@ DEFAULT
 PRJ_EXPORTS
 ../rom/imfeatureplugin.iby						 CORE_MW_LAYER_IBY_EXPORT_PATH(imfeatureplugin.iby)
 // ROM SIS stubs
-../sis/imfeaturepluginstub.sis	             /epoc32/data/Z/System/Install/imfeaturepluginstub.sis
+../sis/imfeaturepluginstub.sis	             /epoc32/data/z/system/install/imfeaturepluginstub.sis
 
 PRJ_MMPFILES
 ../srcimdatamodel/group/imdatamodel.mmp

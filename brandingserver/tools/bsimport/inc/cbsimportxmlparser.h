@@ -23,7 +23,7 @@
 #include <e32base.h>
 #include <f32file.h>
 #include <gmxmldocument.h>
-#include <RBSObjOwningPtrArray.h>
+#include <rbsobjowningptrarray.h>
 #include <mbselement.h>
 
 class CMDXMLNode;

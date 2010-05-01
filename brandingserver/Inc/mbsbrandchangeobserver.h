@@ -21,7 +21,7 @@
 #ifndef __MBSBRANDCHANGEOBSERVER_H
 #define __MBSBRANDCHANGEOBSERVER_H
 
-#include <E32Std.h>
+#include <e32std.h>
 
 
 /**

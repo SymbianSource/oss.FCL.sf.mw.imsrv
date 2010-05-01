@@ -21,7 +21,7 @@
 #ifndef __MBSACCESS_H
 #define __MBSACCESS_H
 
-#include <E32Std.h>
+#include <e32std.h>
 #include <mbselement.h>
 #include <bamdesca.h>
 #include <f32file.h>

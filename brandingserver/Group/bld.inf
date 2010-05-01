@@ -34,9 +34,9 @@ PRJ_EXPORTS
 ../Inc/mbselement.h          		MW_LAYER_PLATFORM_EXPORT_PATH(mbselement.h)
 ../Inc/cbsbitmap.h          		MW_LAYER_PLATFORM_EXPORT_PATH(cbsbitmap.h)
 ../Inc/bselementfactory.h          	MW_LAYER_PLATFORM_EXPORT_PATH(bselementfactory.h)
-../Inc/tbselementiterator.h    		MW_LAYER_PLATFORM_EXPORT_PATH(TBSElementIterator.h)
-../Inc/rbsobjowningptrarray.h  		MW_LAYER_PLATFORM_EXPORT_PATH(RBSObjOwningPtrArray.h)
-../Inc/rbsobjowningptrarray.inl		MW_LAYER_PLATFORM_EXPORT_PATH(RBSObjOwningPtrArray.inl)
+../Inc/tbselementiterator.h    		MW_LAYER_PLATFORM_EXPORT_PATH(tbselementiterator.h)
+../Inc/rbsobjowningptrarray.h  		MW_LAYER_PLATFORM_EXPORT_PATH(rbsobjowningptrarray.h)
+../Inc/rbsobjowningptrarray.inl		MW_LAYER_PLATFORM_EXPORT_PATH(rbsobjowningptrarray.inl)
 ../Inc/mbsbrandchangeobserver.h		MW_LAYER_PLATFORM_EXPORT_PATH(mbsbrandchangeobserver.h)
 ../Inc/mbsbackuprestorestateobserver.h	MW_LAYER_PLATFORM_EXPORT_PATH(mbsbackuprestorestateobserver.h)
 

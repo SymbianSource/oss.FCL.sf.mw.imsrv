@@ -22,7 +22,7 @@
 #include <e32std.h>
 
 #include "mbselement.h"
-#include "RBSObjOwningPtrArray.h"
+#include "rbsobjowningptrarray.h"
 
 class RWriteStream;
 

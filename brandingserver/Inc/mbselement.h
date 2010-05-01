@@ -21,7 +21,7 @@
 #define __MBSELEMENT_H
 
 #include <e32std.h>
-#include <RBSObjOwningPtrArray.h>
+#include <rbsobjowningptrarray.h>
 
 enum TBSElementType
 	{
