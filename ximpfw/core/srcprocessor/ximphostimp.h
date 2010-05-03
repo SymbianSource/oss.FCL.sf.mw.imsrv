@@ -28,6 +28,7 @@
 #include "ximprequestidbuilder.h"
 
 
+
 class CXIMPOperationBase;
 class CXIMPEventManager;
 class MXIMPObjectFactory;
@@ -51,6 +52,8 @@ class CXIMPProtocolRequestCompleteEventImp;
 class MProtocolPresenceDataHost;
 class CProtocolPresenceDataHostImp;
 class MProtocolDataHost;
+
+#define UNUSED_FORMAL_PARAM(p) (void) p
 
 
 /**

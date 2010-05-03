@@ -11,8 +11,8 @@
 *
 * Contributors:
 *
-* Description:  Im Service Connection operation factory
- *
+* Description:  Interface for Search info object.
+*
 */
 
 

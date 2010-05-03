@@ -2,7 +2,7 @@
 * Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
 * All rights reserved.
 * This component and the accompanying materials are made available
-* under the terms of "Eclipse Public License v1.0"
+* under the terms of the License "Eclipse Public License v1.0"
 * which accompanies this distribution, and is available
 * at the URL "http://www.eclipse.org/legal/epl-v10.html".
 *
@@ -11,9 +11,10 @@
 *
 * Contributors:
 *
-* Description:  Stores element data and writes it to stream
+* Description:   Stores element data and writes it to stream
 *
 */
+
 
 
 #include <s32strm.h>
@@ -34,7 +35,7 @@
 #include "cbssession.h"
 #include "mbsupdater.h"
 //#include "importlogwriter.h"
-#include "debugtrace.h"
+#include "DebugTrace.h"
 
 
 // ======== MEMBER FUNCTIONS ========
@@ -266,6 +267,7 @@ HBufC* CBSStorageManager::ConstructFileNameL( const TDesC& aAppId,
                   langBuf.Length() + KDot().Length() * 3 + KMaxVersionLenght;
 	fileName = HBufC::NewLC( length );
     
+    if(fileName){
     TPtr file( fileName->Des() );
 
     // [application_id]\[brand_id]\[def_filename][language_id]
@@ -285,11 +287,9 @@ HBufC* CBSStorageManager::ConstructFileNameL( const TDesC& aAppId,
 	    file.Append( KDot() );
     	file.Append( versionBuffer );
     	}
-
-    if( fileName )
-    	{
-    	CleanupStack::Pop( fileName );
-    	}
+    	
+    	CleanupStack::Pop( fileName );      
+    }
     return fileName;
     }
 
