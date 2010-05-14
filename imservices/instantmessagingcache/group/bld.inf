@@ -24,7 +24,7 @@ PRJ_EXPORTS
 ../rom/instantmessagingcache.iby						 	CORE_MW_LAYER_IBY_EXPORT_PATH(instantmessagingcache.iby)
 
 // ROM SIS stubs
-../sis/imcachestub.sis	             /epoc32/data/Z/System/Install/imcachestub.sis
+../sis/imcachestub.sis	             /epoc32/data/z/system/install/imcachestub.sis
 // module include
 #include "../imcacheserver/group/bld.inf"
 #include "../imcacheclient/group/bld.inf"
