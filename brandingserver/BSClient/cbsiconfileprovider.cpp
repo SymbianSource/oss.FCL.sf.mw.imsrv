@@ -20,7 +20,7 @@
 // INCLUDE FILES
 #include    "cbsiconfileprovider.h"
 #include	<aknappui.h>
-#include    <akniconutils.h>
+#include    <AknIconUtils.h>
 
 // ============================ MEMBER FUNCTIONS ===============================
 

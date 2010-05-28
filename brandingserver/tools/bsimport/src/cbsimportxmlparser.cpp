@@ -21,7 +21,7 @@
 #include <gmxmlelement.h>
 #include <gmxmltext.h>
 #include <utf.h>
-#include <aknutils.h>
+#include <AknUtils.h>
 #include <bselementfactory.h>
 #include <cbsbitmap.h>
 

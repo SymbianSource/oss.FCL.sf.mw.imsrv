@@ -20,8 +20,8 @@
 //  INCLUDE FILES
 
 #include <e32base.h>
-#include <aknsskininstance.h>	// skins 
-#include <aknsutils.h>
+#include <AknsSkinInstance.h>	// skins 
+#include <AknsUtils.h>
 #include <coemain.h>
 
 #include "cbsaccess.h"
