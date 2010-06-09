@@ -31,7 +31,7 @@
 &EN
 
 ;Header
-#{"BS"}, (0x102828DE), 1, 0, 0, TYPE=SA
+#{"BS"}, (0x102828DE), 1, 0, 0, TYPE=SA, RU
 
 
 ;Localised VendorID
@@ -41,7 +41,7 @@
 :"Nokia"
 
 ;binaries
-""-"!:\sys\bin\bsserver.exe"
-""-"!:\sys\bin\bsclient.dll"
+""-"z:\sys\bin\bsserver.exe"
+""-"z:\sys\bin\bsclient.dll"
 
 

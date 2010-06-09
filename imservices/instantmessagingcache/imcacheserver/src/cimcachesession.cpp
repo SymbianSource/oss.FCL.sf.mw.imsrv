@@ -560,7 +560,7 @@ void CIMCacheSession::SendUnreadChangeNotificationL( MIMCacheMessageHeader* aMsg
 	{
 	// write the message into continuous memory stream
 	if( iAccessorInitialized  || 
-		iConvesationInitialized && aMsgHeader->IsChatStarted() )
+		iConvesationInitialized /*&& aMsgHeader->IsChatStarted()*/ )
 		{
 		ExternalizeSingleChatDataL(EIMOperationUnreadMessage, aMsgHeader, aMessage );
 		if( iObserverActive )

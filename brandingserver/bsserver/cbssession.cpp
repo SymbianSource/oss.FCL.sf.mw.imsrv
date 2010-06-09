@@ -511,7 +511,8 @@ void CBSSession::InitUpdateL( const RMessage2 &aMessage, TTransactionType aType)
 		{
 			TRACE( T_LIT("CBSSession::InitUpdateL: Brand discarded!->LeaveWith KErrNotFound") );
 			///Server()->DisplaySessionInfoL( this, KErrNotFound );
-			User::Leave( KErrNotFound );	
+			//User::Leave( KErrNotFound );	
+			iBrandId->Des().Copy( *iDefaultBrandId );
 		}
 	}
 
