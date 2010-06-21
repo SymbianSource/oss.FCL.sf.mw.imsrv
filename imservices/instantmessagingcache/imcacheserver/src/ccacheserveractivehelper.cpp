@@ -226,21 +226,31 @@ void CCacheServerActiveHelper::StartNewConversationL( const RMessage2& aMessage 
 		}
 	// if there are no unread messages then reset the status pane indicator.
 	TInt unreadCount = 0;
+	TInt currentContactUnReadCount = 0;
     TInt headerCount = iHeaderArray.Count();
+    TInt id = 0;
     for( TInt i=0; i< headerCount; i++ )
         {
         // note in this case reciepient is own user id 
         MIMCacheMessageHeader* header = iHeaderArray[i];
         if( header->ServiceId() == sericeId )   
             {
-            unreadCount = unreadCount + header->UnreadMessageCount();   
+			if(buddyId->Compare(iHeaderArray[i]->BuddyId()) == 0)
+				{
+				currentContactUnReadCount = header->UnreadMessageCount();
+				}
+            if(header->UnreadMessageCount()) 
+               	{
+				id = i;
+            	}
+            
             }
         }
-    //BugFix:ESLM-83TF7K: Unread messages are not updated to universal indicator.
-//    if(!unreadCount)
-//        {
-        PublishMessageInfoL(*buddyId,sericeId);
-//        }
+    
+    if(!currentContactUnReadCount)
+        {
+		PublishMessageInfoL(iHeaderArray[id]->BuddyId(),sericeId);
+        }
     
 	CleanupStack::PopAndDestroy(buddyId);
 	

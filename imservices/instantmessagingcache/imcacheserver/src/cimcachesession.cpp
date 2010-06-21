@@ -241,7 +241,14 @@ TBool CIMCacheSession::DispatchMessageL( const RMessage2& aMessage )
 			if( iPacketsArray.Count() )
 				{
 				CIMCacheBufferArray* packet = iPacketsArray[ 0 ] ;
-				iObserverMessage.Complete( packet->OperationCode() );
+				if( packet->OperationCode() ==  EIMOperationFetchAll )
+					{
+					iObserverMessage.Complete( EIMOperationDataAvailable );
+					}
+				else
+					{
+					iObserverMessage.Complete( packet->OperationCode() );
+					}
 				iObserverActive = EFalse;
 				}
 			
@@ -278,7 +285,14 @@ TBool CIMCacheSession::DispatchMessageL( const RMessage2& aMessage )
 			 if( iPacketsArray.Count() )
 				{
 				CIMCacheBufferArray* packet = iPacketsArray[ 0 ] ;
-				iObserverMessage.Complete( packet->OperationCode() );
+				if( packet->OperationCode() ==  EIMOperationFetchAll )
+					{
+					iObserverMessage.Complete( EIMOperationUnreadChange );
+					}
+				else
+					{
+					iObserverMessage.Complete( packet->OperationCode() );
+					}
 				iObserverActive = EFalse;
 				}
 	     	break;
