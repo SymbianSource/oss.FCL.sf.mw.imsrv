@@ -226,7 +226,7 @@ EXPORTS
 	_ZTI38CGroupMembersPresenceConfigurationItem @ 225 NONAME ; #<TI>#
 	_ZTI47CPresentityGroupMembersPresenceSubscriptionItem @ 226 NONAME ; #<TI>#
 	_ZTIN20CPresenceFilterStore27CPresenceFilterStoreMappingE @ 227 NONAME ; #<TI>#
-	_ZTIN22CPresenceInfoFilterImp12CFilterFieldE @ 228 NONAME ; #<TI>#
+	_ZTIN22CPresenceInfoFilterImp12CFilterFieldE @ 228 NONAME ABSENT ; #<TI>#
 	_ZTV18CPresenceDataCache @ 229 NONAME ; #<VT>#
 	_ZTV20CPresenceFilterStore @ 230 NONAME ; #<VT>#
 	_ZTV25CPresenceObjectFactoryImp @ 231 NONAME ; #<VT>#
@@ -242,6 +242,6 @@ EXPORTS
 	_ZTV38CGroupMembersPresenceConfigurationItem @ 241 NONAME ; #<VT>#
 	_ZTV47CPresentityGroupMembersPresenceSubscriptionItem @ 242 NONAME ; #<VT>#
 	_ZTVN20CPresenceFilterStore27CPresenceFilterStoreMappingE @ 243 NONAME ; #<VT>#
-	_ZTVN22CPresenceInfoFilterImp12CFilterFieldE @ 244 NONAME ; #<VT>#
-	_ZThn4_NK21CPresenceBuddyInfoImp14EqualsIdentityEPK18MPresenceBuddyInfo @ 245 NONAME ; #<thunk>#
+	_ZTVN22CPresenceInfoFilterImp12CFilterFieldE @ 244 NONAME ABSENT ; #<VT>#
+	_ZThn4_NK21CPresenceBuddyInfoImp14EqualsIdentityEPK18MPresenceBuddyInfo @ 245 NONAME ABSENT ; #<thunk>#
 
