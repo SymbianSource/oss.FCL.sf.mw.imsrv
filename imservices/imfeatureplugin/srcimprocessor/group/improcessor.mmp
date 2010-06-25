@@ -63,7 +63,7 @@ LIBRARY					flogger.lib
 
 //EXPORTUNFROZEN
 
-#if defined( ARMCC )
+#if defined( EABI )
 DEFFILE ../../eabi/ 
 #elif defined ( WINSCW )
 deffile ../../bwins/ 

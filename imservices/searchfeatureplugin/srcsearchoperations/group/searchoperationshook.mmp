@@ -54,7 +54,7 @@ LIBRARY                 searchoperation.lib
 LIBRARY                 ecom.lib
 
 
-#if defined( ARMCC )
+#if defined( EABI )
 DEFFILE ../../eabi/ 
 #elif defined ( WINSCW )
 deffile ../../bwins/ 
