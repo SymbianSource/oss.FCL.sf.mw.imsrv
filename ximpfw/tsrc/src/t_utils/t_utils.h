@@ -18,7 +18,12 @@
 #ifndef T_UTILS_H__
 #define T_UTILS_H__
 
-#include <ceunittestsuiteclass.h>
+
+//  EXTERNAL INCLUDES
+#include <platform/digia/eunit/ceunittestsuiteclass.h>
+#include <platform/digia/eunit/EUnitDecorators.h>
+
+
 #include <ximpbase.h>
 
 #include "prfwteststatuseventlistener.h"

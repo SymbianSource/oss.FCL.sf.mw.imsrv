@@ -16,16 +16,21 @@
 */
 
 
-#include <eunitmacros.h>
 #include <ecom/ecom.h>
 #include <badesca.h>
 #include <e32property.h>
 #include <e32base.h>
 #include <e32std.h>
 
+#include "eunittools.h"
+
+
+#include <platform/digia/eunit/eunitmacros.h>
+#include <platform/digia/eunit/teunitassertioninfo.h>
+
 #include "t_utils.h"
 
-#include "eunittools.h"
+
 
 #include <ximpbase.h>
 #include <presenceinfo.h>
