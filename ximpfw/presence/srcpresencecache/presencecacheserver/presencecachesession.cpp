@@ -740,8 +740,11 @@ void CPresenceCacheSession::HandleSubscribeBuddyPresenceChange
             CleanupStack::Pop(serviceStore);  
             }
         buddyStore = CPresenceCacheBuddyStore::NewLC(serviceStore,identity);
-        err = serviceStore->AddBlind(buddyStore); //ownership transferred
-        CleanupStack::Pop(buddyStore);
+        if(buddyStore)
+        	{
+        	err = serviceStore->AddBlind(buddyStore); //ownership transferred
+        	CleanupStack::Pop(buddyStore);
+        	}
         CleanupStack::Pop(identity);
         } 
     else

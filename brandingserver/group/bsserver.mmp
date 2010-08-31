@@ -2,7 +2,7 @@
 * Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
 * All rights reserved.
 * This component and the accompanying materials are made available
-* under the terms of "Eclipse Public License v1.0"
+* under the terms of the License "Eclipse Public License v1.0"
 * which accompanies this distribution, and is available
 * at the URL "http://www.eclipse.org/legal/epl-v10.html".
 *
@@ -11,9 +11,10 @@
 *
 * Contributors:
 *
-* Description: Branding server, server comopnent project description file.
+* Description:  Branding server, server comopnent project description file.
 *
 */
+
 #include        "bsuids.h"
 #include <platform_paths.hrh>
 #include <data_caging_paths_strings.hrh>
@@ -28,7 +29,7 @@ CAPABILITY      CAP_SERVER
 TARGETPATH      /system/libs
 
 
-SOURCEPATH  ../bsserver
+SOURCEPATH  ../BSServer
 SOURCE      cbsserver.cpp
 SOURCE      cbssession.cpp
 SOURCE	    cbsbrandhandler.cpp
@@ -38,17 +39,17 @@ SOURCE	    cbsstorage.cpp
 SOURCE      cbsinstallhandler.cpp
 SOURCE      cbsbackupobserver.cpp
 
-SOURCEPATH	../bsclient
+SOURCEPATH	../BSClient
 SOURCE		cbselement.cpp
 SOURCE		cbsbitmap.cpp
 SOURCE		bselementfactory.cpp
 
 
 
-USERINCLUDE     ../group
-USERINCLUDE     ../bsserver
-USERINCLUDE     ../bsclient
-USERINCLUDE     ../inc
+USERINCLUDE     ../Group
+USERINCLUDE     ../BSServer
+USERINCLUDE     ../BSClient
+USERINCLUDE     ../Inc
 
 APP_LAYER_SYSTEMINCLUDE
 

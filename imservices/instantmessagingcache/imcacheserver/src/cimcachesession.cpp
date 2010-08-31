@@ -241,14 +241,7 @@ TBool CIMCacheSession::DispatchMessageL( const RMessage2& aMessage )
 			if( iPacketsArray.Count() )
 				{
 				CIMCacheBufferArray* packet = iPacketsArray[ 0 ] ;
-				if( packet->OperationCode() ==  EIMOperationFetchAll )
-					{
-					iObserverMessage.Complete( EIMOperationDataAvailable );
-					}
-				else
-					{
-					iObserverMessage.Complete( packet->OperationCode() );
-					}
+				iObserverMessage.Complete( packet->OperationCode() );
 				iObserverActive = EFalse;
 				}
 			
@@ -285,14 +278,7 @@ TBool CIMCacheSession::DispatchMessageL( const RMessage2& aMessage )
 			 if( iPacketsArray.Count() )
 				{
 				CIMCacheBufferArray* packet = iPacketsArray[ 0 ] ;
-				if( packet->OperationCode() ==  EIMOperationFetchAll )
-					{
-					iObserverMessage.Complete( EIMOperationUnreadChange );
-					}
-				else
-					{
-					iObserverMessage.Complete( packet->OperationCode() );
-					}
+				iObserverMessage.Complete( packet->OperationCode() );
 				iObserverActive = EFalse;
 				}
 	     	break;
@@ -574,7 +560,7 @@ void CIMCacheSession::SendUnreadChangeNotificationL( MIMCacheMessageHeader* aMsg
 	{
 	// write the message into continuous memory stream
 	if( iAccessorInitialized  || 
-		iConvesationInitialized /*&& aMsgHeader->IsChatStarted()*/ )
+		iConvesationInitialized && aMsgHeader->IsChatStarted() )
 		{
 		ExternalizeSingleChatDataL(EIMOperationUnreadMessage, aMsgHeader, aMessage );
 		if( iObserverActive )

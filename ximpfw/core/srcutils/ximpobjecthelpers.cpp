@@ -59,7 +59,6 @@ EXPORT_C HBufC8* TXIMPHBuf8Packer::PackArrayL( const RPointerArray< HBufC8 >& aB
 //
 EXPORT_C void TXIMPHBuf8Packer::UnPackArrayL( RPointerArray< HBufC8 >& aBufferArray, const TDesC8& aPack  )
     {
-	CleanupClosePushL( aBufferArray );
 	// No reset
     if ( ! aPack.Length() )
         {
@@ -84,7 +83,6 @@ EXPORT_C void TXIMPHBuf8Packer::UnPackArrayL( RPointerArray< HBufC8 >& aBufferAr
         aBufferArray.AppendL( theObject );
 		}
     CleanupStack::Pop( objCount ); // all the objects
-    CleanupStack::PopAndDestroy(); // rs   
-    CleanupStack::Pop( &aBufferArray );
+    CleanupStack::PopAndDestroy(); // rs    
     }
 // End of file

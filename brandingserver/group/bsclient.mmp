@@ -2,7 +2,7 @@
 * Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
 * All rights reserved.
 * This component and the accompanying materials are made available
-* under the terms of "Eclipse Public License v1.0"
+* under the terms of the License "Eclipse Public License v1.0"
 * which accompanies this distribution, and is available
 * at the URL "http://www.eclipse.org/legal/epl-v10.html".
 *
@@ -11,9 +11,10 @@
 *
 * Contributors:
 *
-* Description: Branding server client component project descripton file.
+* Description:  Branding server client component project descripton file.
 *
 */
+
 #include            "bsuids.h"
 #include <platform_paths.hrh>
 #include <data_caging_paths_strings.hrh>
@@ -25,7 +26,7 @@ CAPABILITY          CAP_CLIENT_DLL
 VENDORID            VID_DEFAULT
 
 
-SOURCEPATH          ../bsclient
+SOURCEPATH          ../BSClient
 SOURCE              cbsclient.cpp
 SOURCE              bsprocessstarter.cpp
 SOURCE		    cbsfactory.cpp
@@ -38,9 +39,9 @@ SOURCE			cbsbrandobserver.cpp
 SOURCE			cbsiconfileprovider.cpp
 
 
-USERINCLUDE         ../group
-USERINCLUDE         ../bsserver
-USERINCLUDE         ../bsclient
+USERINCLUDE         ../Group
+USERINCLUDE         ../BSServer
+USERINCLUDE         ../BSClient
 
 APP_LAYER_SYSTEMINCLUDE
 

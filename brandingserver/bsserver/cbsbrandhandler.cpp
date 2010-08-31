@@ -2,7 +2,7 @@
 * Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
 * All rights reserved.
 * This component and the accompanying materials are made available
-* under the terms of "Eclipse Public License v1.0"
+* under the terms of the License "Eclipse Public License v1.0"
 * which accompanies this distribution, and is available
 * at the URL "http://www.eclipse.org/legal/epl-v10.html".
 *
@@ -11,16 +11,17 @@
 *
 * Contributors:
 *
-* Description: CBSBrandHandler.cpp
+* Description:  CBSBrandHandler.cpp
 *
 */
+
 
 
 //  INCLUDE FILES
 
 #include "cbsbrandhandler.h"
 #include "bselementfactory.h"
-#include "debugtrace.h"
+#include "DebugTrace.h"
 #include "cbsstoragemanager.h"
 #include "cbsbitmap.h"
 #include "bsimportconstants.h"
@@ -210,7 +211,6 @@ void CBSBrandHandler::GetFileL( const TDesC8& aId, RFile& aFile )
 	if (iLanguage >= 100)
 		User::LeaveIfError (KErrNotFound);
 	HBufC* fileName = GetTextL( aId );
-	CleanupStack :: PushL (fileName);
 
     TBuf<KLangBufLength> buffer;
 // append leading zero only if language code is <10.
@@ -240,8 +240,6 @@ void CBSBrandHandler::GetFileL( const TDesC8& aId, RFile& aFile )
 		TRACE( T_LIT( "CBSBrandHandler::GetFileL found in default brand") );
 	    
 	    }
-	
-	CleanupStack :: PopAndDestroy (fileName);
 
 	aFile = file;
     TRACE( T_LIT( "CBSBrandHandler::GetFileL end") );

@@ -22,10 +22,7 @@ PRJ_PLATFORMS
 DEFAULT
 
 PRJ_EXPORTS
-
-#ifdef FF_MECO_XMPP
 ../rom/xmppsettingsfetcher.iby						 CORE_MW_LAYER_IBY_EXPORT_PATH(xmppsettingsfetcher.iby)
-#endif
 
 PRJ_MMPFILES
 

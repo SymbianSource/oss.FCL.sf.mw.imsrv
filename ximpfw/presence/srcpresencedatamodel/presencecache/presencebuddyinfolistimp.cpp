@@ -141,9 +141,10 @@ TInt CPresenceBuddyInfoListImp::AddOrReplace(
     MPresenceBuddyInfo* aPresenceBuddyInfo)
     {
     TRACE( _L("CPresenceBuddyInfoListImp::AddOrReplace - begin") );
-    TRACE_1( _L("______identity: %S"), &(aPresenceBuddyInfo->BuddyId()->Identity()));        
-    if(!aPresenceBuddyInfo)
-        return KErrArgument;
+    if(aPresenceBuddyInfo)
+    	TRACE_1( _L("______identity: %S"), &(aPresenceBuddyInfo->BuddyId()->Identity()));        
+    else
+    	return KErrArgument;
     
     if ( (ServiceName() != KNullDesC) && 
         (ExtractService( aPresenceBuddyInfo->BuddyId()->Identity()).Compare( ServiceName()) ))

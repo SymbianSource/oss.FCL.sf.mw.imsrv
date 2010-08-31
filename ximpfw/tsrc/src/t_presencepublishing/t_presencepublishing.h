@@ -18,11 +18,7 @@
 #ifndef T_PRESENCEPUBLISHING_H
 #define T_PRESENCEPUBLISHING_H
 
-
-//  EXTERNAL INCLUDES
-#include <platform/digia/eunit/ceunittestsuiteclass.h>
-#include <platform/digia/eunit/EUnitDecorators.h>
-
+#include <ceunittestsuiteclass.h>
 #include <ximpbase.h>
 #include "prfwteststatuseventlistener.h"
 #include "prfwtestmessaging.h"
