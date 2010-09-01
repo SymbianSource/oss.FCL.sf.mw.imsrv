@@ -2,7 +2,7 @@
 * Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
 * All rights reserved.
 * This component and the accompanying materials are made available
-* under the terms of the License "Eclipse Public License v1.0"
+* under the terms of "Eclipse Public License v1.0"
 * which accompanies this distribution, and is available
 * at the URL "http://www.eclipse.org/legal/epl-v10.html".
 *
@@ -11,10 +11,9 @@
 *
 * Contributors:
 *
-* Description:  CBSInstallhandler.cpp
+* Description: CBSInstallhandler.cpp
 *
 */
-
 
 
 //  INCLUDE FILES
@@ -26,7 +25,7 @@
 #include <e32property.h>
 
 #include "cbsinstallhandler.h"
-#include "DebugTrace.h"
+#include "debugtrace.h"
 #include "bsimportconstants.h"
 #include "cbsstoragemanager.h"
 
@@ -344,7 +343,7 @@ TBool CBSInstallHandler::IsBrandInstalled( const TDesC& aBrand )
     // aaa$bbb -> aaa$bbb.install
     CDir* dir = NULL;
     iFs.GetDir( file, KEntryAttNormal, ESortNone, dir );
-    if( dir->Count() > 0 )
+    if( dir && dir->Count() > 0 )
         {
         // brand is installed
         delete dir;
@@ -363,7 +362,7 @@ TBool CBSInstallHandler::IsBrandInstalled( const TDesC& aBrand )
     // check file with different versions:
     // aaa$bbb -> aaa$bbb$*.install
     iFs.GetDir( file, KEntryAttNormal, ESortNone, dir );
-    if( dir->Count() > 0 )
+    if( dir && dir->Count() > 0 )
         {
         // brand is installed
         delete dir;

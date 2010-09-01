@@ -54,4 +54,4 @@ PRJ_EXPORTS
 ../inc/protocoldatahost.inl							MW_LAYER_PLATFORM_EXPORT_PATH(protocoldatahost.inl)
 ../inc/ximpitemparentbase.h							MW_LAYER_PLATFORM_EXPORT_PATH(ximpitemparentbase.h)
 ../inc/ximpsubscriptionitembase.h				MW_LAYER_PLATFORM_EXPORT_PATH(ximpsubscriptionitembase.h)
-../inc/ximpfeaturepluginIfids.hrh				MW_LAYER_PLATFORM_EXPORT_PATH(ximpfeaturepluginifids.hrh)
+../inc/ximpfeaturepluginifids.hrh				MW_LAYER_PLATFORM_EXPORT_PATH(ximpfeaturepluginifids.hrh)

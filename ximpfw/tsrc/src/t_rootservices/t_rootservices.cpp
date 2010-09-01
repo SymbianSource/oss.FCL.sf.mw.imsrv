@@ -18,9 +18,11 @@
 #include "t_rootservices.h"
 
 #include "eunittools.h"
-#include <eunitmacros.h>
+
 #include <ecom/ecom.h>
 #include <badesca.h>
+#include <platform/digia/eunit/eunitmacros.h>
+#include <platform/digia/eunit/teunitassertioninfo.h>
 
 //XIMP headers
 #include <ximpbase.h>

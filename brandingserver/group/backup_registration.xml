@@ -3,7 +3,7 @@
 <!-- Backup registration file for Branding Server -->
 
 <backup_registration version="1.0">
-	<passive_backup delete_before_restore="yes">
+	<passive_backup delete_before_restore="no">
 		<include_directory name="\"/>		
 	</passive_backup>
 	<proxy_data_manager SID="0x10202BE9"/>

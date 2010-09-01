@@ -2,7 +2,7 @@
 * Copyright (c) 2006-2006 Nokia Corporation and/or its subsidiary(-ies).
 * All rights reserved.
 * This component and the accompanying materials are made available
-* under the terms of the License "Eclipse Public License v1.0"
+* under the terms of "Eclipse Public License v1.0"
 * which accompanies this distribution, and is available
 * at the URL "http://www.eclipse.org/legal/epl-v10.html".
 *
@@ -11,10 +11,9 @@
 *
 * Contributors:
 *
-* Description:   Writes IBY files
+* Description:  Writes IBY files
 *
 */
-
 
 
 #include <f32file.h>
@@ -24,7 +23,7 @@
 #include "cbsibywriter.h"
 #include "bsimportconstants.h"
 //#include "importlogwriter.h"
-#include "DebugTrace.h"
+#include "debugtrace.h"
 
 // CONSTANTS
 _LIT8( KIBYHeader1,           "\n#ifndef __BRAND_" );

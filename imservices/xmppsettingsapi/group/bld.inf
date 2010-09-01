@@ -24,12 +24,14 @@ PRJ_PLATFORMS
 DEFAULT
 
 PRJ_EXPORTS
+
+#ifdef FF_MECO_XMPP
 ../rom/xmppsettingsapi.iby						 CORE_MW_LAYER_IBY_EXPORT_PATH(xmppsettingsapi.iby)
-1020E334.txt                					 /epoc32/data/z/private/10202be9/1020e334.txt				//temporary
-1020E334.txt                					 /epoc32/release/winscw/udeb/z/private/10202be9/1020e334.txt	//temporary
+1020E334.txt                					 /epoc32/data/Z/private/10202be9/1020E334.txt				//temporary
+1020E334.txt                					 /epoc32/release/winscw/udeb/Z/private/10202be9/1020E334.txt	//temporary
 
-1020E334.txt                					 /epoc32/release/winscw/urel/z/private/10202be9/1020e334.txt	//temporary
-
+1020E334.txt                					 /epoc32/release/winscw/urel/Z/private/10202be9/1020E334.txt	//temporary
+#endif
 
 PRJ_MMPFILES
 xmppsettingsapi.mmp

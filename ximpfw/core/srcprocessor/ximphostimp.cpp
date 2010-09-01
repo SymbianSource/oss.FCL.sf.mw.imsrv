@@ -137,8 +137,7 @@ void CXIMPHost::ConstructL()
 
     for ( int i = 0;i < 5;i++ )
         {
-        TInt Ret = iCallBack.Append( new ( ELeave ) CAsyncCallBack( CActive::EPriorityHigh ) );
-        UNUSED_FORMAL_PARAM(Ret);	
+        iCallBack.Append( new ( ELeave ) CAsyncCallBack( CActive::EPriorityHigh ) );
         }
     
     iCallBack[ECompleteRequestCallback]->Set( TCallBack( CompleteRequestCallback, this ) );

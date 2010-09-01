@@ -2,7 +2,7 @@
 * Copyright (c) 2006 Nokia Corporation and/or its subsidiary(-ies).
 * All rights reserved.
 * This component and the accompanying materials are made available
-* under the terms of the License "Eclipse Public License v1.0"
+* under the terms of "Eclipse Public License v1.0"
 * which accompanies this distribution, and is available
 * at the URL "http://www.eclipse.org/legal/epl-v10.html".
 *
@@ -11,10 +11,9 @@
 *
 * Contributors:
 *
-* Description:  CBSSession.cpp
+* Description: CBSSession.cpp
 *
 */
-
 
 
 //  INCLUDE FILES
@@ -23,7 +22,7 @@
 
 #include "cbssession.h"
 #include "cbsserver.h"
-#include "DebugTrace.h"
+#include "debugtrace.h"
 #include "cbsbrandhandler.h"
 #include "cbsstoragemanager.h"
 #include "cbsstorage.h"
@@ -73,6 +72,10 @@ CBSSession::~CBSSession()
 	delete iBuffer;
 	delete iBranding;
 	delete iSeveralData;
+
+	delete iApplicationId;
+	delete iBrandId;
+	delete iDefaultBrandId;
 	
 #ifdef __WINSCW__
 	if( iStorageManager )
@@ -508,7 +511,8 @@ void CBSSession::InitUpdateL( const RMessage2 &aMessage, TTransactionType aType)
 		{
 			TRACE( T_LIT("CBSSession::InitUpdateL: Brand discarded!->LeaveWith KErrNotFound") );
 			///Server()->DisplaySessionInfoL( this, KErrNotFound );
-			User::Leave( KErrNotFound );	
+			//User::Leave( KErrNotFound );	
+			iBrandId->Des().Copy( *iDefaultBrandId );
 		}
 	}
 

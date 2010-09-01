@@ -65,13 +65,13 @@ EXPORT_C void CXIMPTestMessenger::ResetPubSub()
     {
     // check if we've already defined the keys. if we redefine and set
     // defaults, the test logic breaks.
-    TInt pubSubDefined = GetValueFor( EXIMPTestMetaPubSubDefined );
+    /*TInt pubSubDefined = GetValueFor( EXIMPTestMetaPubSubDefined );
     if ( pubSubDefined )
         {
         // all done
         return;
         }
-
+*/
     TInt r = 0;
 
     // special behavioral keys

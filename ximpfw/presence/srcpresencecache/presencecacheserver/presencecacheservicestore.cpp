@@ -137,10 +137,10 @@ TInt CPresenceCacheServiceStore::PresenceCount() const
 TInt CPresenceCacheServiceStore::AddBlind(CPresenceCacheBuddyStore* aBuddyStore)
     {
     TRACE( _L("CPresenceCacheServiceStore::AddBlind - begin") );
-    if(aBuddyStore)
-      TRACE_1( _L("______identity: %S"), &(aBuddyStore->BuddyId()->Identity()));
-    else
-      return KErrArgument;
+    TRACE_1( _L("______identity: %S"), &(aBuddyStore->BuddyId()->Identity()));
+    
+    if(!aBuddyStore)
+        return KErrArgument;
     
     iBuddyStoreCollection.Append(aBuddyStore);
     
@@ -163,16 +163,13 @@ CPresenceCacheBuddyStore* CPresenceCacheServiceStore::AddOrReplacePresenceL
                                             (MPresenceBuddyInfo* aBuddyPresInfo)
     {
     TRACE( _L("CPresenceCacheServiceStore::AddOrReplacePresence - begin") );
-    
+    TRACE_1( _L("______identity: %S"), &(aBuddyPresInfo->BuddyId()->Identity()));
     
     
     CPresenceCacheBuddyStore* newBuddyStore(NULL);
-    if(aBuddyPresInfo)
-      TRACE_1( _L("______identity: %S"), &(aBuddyPresInfo->BuddyId()->Identity()));
-    else
-    	{
-            return newBuddyStore;
-        }
+    if(!aBuddyPresInfo)
+        return newBuddyStore;
+    
     TBool oldPresExists(EFalse);
     
     TInt count = iBuddyStoreCollection.Count();
