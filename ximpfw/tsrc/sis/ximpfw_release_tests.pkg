@@ -11,7 +11,7 @@
 ;
 ; Contributors:
 ;
-; Description:
+; Description: XIMP Framewor Test code Package File
 ;
 ;Header
 #{"XIMPFW ReleaseTests"}, (0x10282DE4), 1, 0, 0

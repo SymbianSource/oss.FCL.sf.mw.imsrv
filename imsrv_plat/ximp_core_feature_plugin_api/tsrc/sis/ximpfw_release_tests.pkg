@@ -11,7 +11,7 @@
 ;
 ; Contributors:
 ;
-; Description:
+; Description: XIMP Framewor Test code Package File
 ;
 ;Header
 #{"XIMPFW ReleaseTests"}, (0x10282DE4), 1, 0, 0
@@ -38,7 +38,7 @@
 
 
 ;EUnit test dlls
-"\EPOC32\RELEASE\ARMV5\UREL\t_presenceall.dll" - "!:\sys\bin\t_presenceall.dll"
+;"\EPOC32\RELEASE\ARMV5\UREL\t_presenceall.dll" - "!:\sys\bin\t_presenceall.dll"
 "\EPOC32\RELEASE\ARMV5\UREL\t_rootservices.dll" - "!:\sys\bin\t_rootservices.dll"
 "\EPOC32\RELEASE\ARMV5\UREL\t_sessionmng.dll" - "!:\sys\bin\t_sessionmng.dll"
 "\EPOC32\RELEASE\ARMV5\UREL\t_presencepublishing.dll" - "!:\sys\bin\t_presencepublishing.dll"

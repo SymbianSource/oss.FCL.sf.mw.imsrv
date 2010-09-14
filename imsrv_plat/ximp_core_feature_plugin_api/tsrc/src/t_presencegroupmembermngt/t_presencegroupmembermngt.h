@@ -18,7 +18,12 @@
 #ifndef T_PRESENCEGROUPMEMBERMANAGEMENT_H
 #define T_PRESENCEGROUPMEMBERMANAGEMENT_H
 
-#include <ceunittestsuiteclass.h>
+
+
+//  EXTERNAL INCLUDES
+#include <platform/digia/eunit/ceunittestsuiteclass.h>
+#include <platform/digia/eunit/EUnitDecorators.h>
+
 #include <ximpbase.h>
 #include <presenceinfo.h>
 #include "prfwteststatuseventlistener.h"

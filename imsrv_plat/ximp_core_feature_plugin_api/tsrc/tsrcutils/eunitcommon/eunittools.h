@@ -19,11 +19,16 @@
 #define EUNITTOOLS_H
 
 #include <e32std.h>
-#include <eunitmacros.h>
-#include <ceunittestcasedecorator.h>
-#include <ceunitalloctestcasedecorator.h>
-#include <ceunitemptytestcasedecorator.h>
-//#include "cglobalwaitingnote.h"
+
+#include <platform/digia/eunit/eunitmacros.h>
+#include <platform/digia/eunit/teunitassertioninfo.h>
+
+
+#include <platform/digia/eunit/ceunittestsuiteclass.h>
+#include <platform/digia/eunit/EUnitDecorators.h>
+
+
+#include "cglobalwaitingnote.h"
 
 
 
@@ -145,7 +150,7 @@ inline void EUnitTools::NotifyFromTestEnterL()
         msg.Append( _L("Entering to test case. Test process:") );
         msg.Append( processImage );
 
-     //   CGlobalWaitingNote::ShowMsgL( msg, 15000000, 15 );  //15 seconds, 1 second steps
+        CGlobalWaitingNote::ShowMsgL( msg, 15000000, 15 );  //15 seconds, 1 second steps
 
         EUNIT_ENABLE_ANY_DECORATOR;
         }
