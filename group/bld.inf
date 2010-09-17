@@ -24,9 +24,9 @@ WINSCW ARMV5
 
 // MMP files for project components
 PRJ_MMPFILES
-#include "../imsrv_plat/group/bld.inf"
-#include "../ximpfw/group/bld.inf"
-#include "../imservices/group/bld.inf"
+//#include "../imsrv_plat/group/bld.inf"
+//#include "../ximpfw/group/bld.inf"
+//#include "../imservices/group/bld.inf"
 #include "../brandingserver/Group/bld.inf"
 
 PRJ_TESTMMPFILES
