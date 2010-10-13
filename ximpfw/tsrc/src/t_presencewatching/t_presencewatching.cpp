@@ -18,10 +18,7 @@
 
 #include "eunittools.h"
 
-#include <platform/digia/eunit/eunitmacros.h>
-#include <platform/digia/eunit/teunitassertioninfo.h>
-
-
+#include <eunitmacros.h>
 #include <ecom/ecom.h>
 #include <badesca.h>
 

@@ -18,11 +18,7 @@
 #ifndef T_PRESENCEGROUPLISTMANAGEMENT_H
 #define T_PRESENCEGROUPLISTMANAGEMENT_H
 
-
-//  EXTERNAL INCLUDES
-#include <platform/digia/eunit/ceunittestsuiteclass.h>
-#include <platform/digia/eunit/EUnitDecorators.h>
-
+#include <ceunittestsuiteclass.h>
 #include <ximpbase.h>
 #include "prfwteststatuseventlistener.h"
 #include "prfwtestmessaging.h"

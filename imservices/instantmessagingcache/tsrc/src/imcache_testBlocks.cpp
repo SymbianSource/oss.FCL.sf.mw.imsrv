@@ -273,7 +273,6 @@ TInt Cimcache_test::FetchExistingMessageL( CStifItemParser& /*aItem*/ )
     {
      CIMCacheFactory* instance = CIMCacheFactory::InstanceL(); 
 	 TInt error = KErrNotFound;  
-	 iMessageFetch = 0;
 	 MIMCacheUpdater* updater = instance->CreateUpdaterL(1, _L("testlm123@gmail.com") ,ETrue);
 	 // tow message appended hence counter will be two.
 	 updater->AppendReceiveMessageL( _L("testui123@gmail.com"),_L("hello this is test first message appended") ) ;
@@ -281,10 +280,10 @@ TInt Cimcache_test::FetchExistingMessageL( CStifItemParser& /*aItem*/ )
 	  
      updater->RegisterObserverL(*this);
      
- /*    if( !iWait.IsStarted() )
+     if( !iWait.IsStarted() )
           {
           iWait.Start(); 
-          }*/
+          }
      
  	 updater->StartNewConversationL( _L("testui123@gmail.com") ) ;
 	 
@@ -416,22 +415,11 @@ TInt Cimcache_test::GetAllUnreadMsgCountL(CStifItemParser& /*aItem*/)
 TInt Cimcache_test::ConversationUnExistTestL(CStifItemParser& /*aItem*/) 
 	{
 	 CIMCacheFactory* instance = CIMCacheFactory::InstanceL(); 
-	 MIMCacheUpdater* updater = instance->CreateUpdaterL(1, _L("testlm123@gmail.com"), ETrue );
-	 updater->RegisterObserverL(*this);
-	 
-	 updater->StartNewConversationL( _L("testui123@gmail.com") ) ;
-	  	
-	 	 if( !iWait.IsStarted() )
-	 		 {
-	 		 iWait.Start();	
-	 		 }
-	 	 
-	 updater->CloseAllConversationL();	
-	 	 
+	   
 	 MIMCacheAccessor* accessor = instance->CreateAccessorL(1, _L("testlm123@gmail.com") );
 	// not yest conversation open so must be EFalse here
  	 TBool ret = accessor->IsConversationExistL(_L("testui123@gmail.com") );
- 	 updater->UnRegisterObserver(*this);
+ 	 
 	 CIMCacheFactory::Release();
 	 
 	 if(!ret)
@@ -629,7 +617,7 @@ void Cimcache_test::HandleIMCacheEventL( TIMCacheEventType aEventType, TAny* /*a
 			case EIMCacheNewMessage :
 				{
 				iMessageFetch++;
-                if( iWait.IsStarted() /*&& iMessageFetch == 2 */)
+                if( iWait.IsStarted() && iMessageFetch == 2 )
                     {
                     iWait.AsyncStop(); 
                     }

@@ -38,7 +38,7 @@ file=ABI_DIR\BUILD_DIR\t_presencewatcherlistmngt.dll    SHARED_LIB_DIR\t_presenc
 file=ABI_DIR\BUILD_DIR\t_presenceauthorization.dll      SHARED_LIB_DIR\t_presenceauthorization.dll
 file=ABI_DIR\BUILD_DIR\t_presenceblocking.dll           SHARED_LIB_DIR\t_presenceblocking.dll
 file=ABI_DIR\BUILD_DIR\t_utils.dll                      SHARED_LIB_DIR\t_utils.dll
-file=ABI_DIR\BUILD_DIR\t_presencegrantrequestmngt.dll              SHARED_LIB_DIR\t_presencegrantrequestmngt.dll
+file=ABI_DIR\BUILD_DIR\t_presencecache.dll              SHARED_LIB_DIR\t_presencecache.dll
 
 //ProcessMaster
 file=ABI_DIR\BUILD_DIR\prfwtestprocessmaster.exe        SHARED_LIB_DIR\prfwtestprocessmaster.exe

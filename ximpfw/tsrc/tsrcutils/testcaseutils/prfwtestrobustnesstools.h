@@ -21,9 +21,7 @@
 
 // INCLUDES
 #include <e32std.h>
-
-#include <platform/digia/eunit/eunitmacros.h>
-#include <platform/digia/eunit/teunitassertioninfo.h>
+#include <eunitmacros.h>
 #include "prfwtestprocessmaster.h"
 #include "userafter.h"
 #include "prfwtestfiletool.h"

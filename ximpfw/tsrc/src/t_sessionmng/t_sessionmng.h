@@ -18,13 +18,7 @@
 #ifndef T_SESSIONMNG_H__
 #define T_SESSIONMNG_H__
 
-
-
-
-//  EXTERNAL INCLUDES
-#include <platform/digia/eunit/ceunittestsuiteclass.h>
-#include <platform/digia/eunit/EUnitDecorators.h>
-
+#include <ceunittestsuiteclass.h>
 #include <ximpbase.h>
 
 #include "prfwteststatuseventlistener.h"

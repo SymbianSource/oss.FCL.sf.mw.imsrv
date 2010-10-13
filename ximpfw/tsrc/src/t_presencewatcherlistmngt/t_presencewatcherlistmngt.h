@@ -18,11 +18,7 @@
 #ifndef T_PRESENCEWATCHERLISTMANAGEMENT_H
 #define T_PRESENCEWATCHERLISTMANAGEMENT_H
 
-
-//  EXTERNAL INCLUDES
-#include <platform/digia/eunit/ceunittestsuiteclass.h>
-#include <platform/digia/eunit/EUnitDecorators.h>
-
+#include <ceunittestsuiteclass.h>
 #include <ximpbase.h>
 #include <ximpcontextobserver.h>
 #include "presencetypehelpers.h"

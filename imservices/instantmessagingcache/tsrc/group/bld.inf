@@ -22,11 +22,11 @@ PRJ_PLATFORMS
 // defaults to WINS MARM so you can ignore this if you just build these
 DEFAULT
 
-PRJ_EXPORTS
+PRJ_TESTEXPORTS
 // NOTE: If using ARS requirements all export operations should be done under this.
 // 'abld test export'
 
-PRJ_TESTEXPORTS
+PRJ_EXPORTS
 // Specify the source file followed by its destination here
 // copy will be used to copy the source file to its destination
 // If there's no destination then the source file will be copied

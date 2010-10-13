@@ -18,10 +18,7 @@
 #ifndef T_ROOTSERVICES_H__
 #define T_ROOTSERVICES_H__
 
-
-//  EXTERNAL INCLUDES
-#include <platform/digia/eunit/ceunittestsuiteclass.h>
-#include <platform/digia/eunit/EUnitDecorators.h>
+#include <ceunittestsuiteclass.h>
 #include <ximpbase.h>
 
 class MXIMPProtocolInfo;
